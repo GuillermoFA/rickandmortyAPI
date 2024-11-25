@@ -17,17 +17,30 @@ function CharacterCard({ character }) {
         alt={character.name}
       />
       <div className="flex flex-col justify-between p-4 leading-normal">
+        {/* Nombre del personaje */}
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {character.name}
         </h5>
-        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400 ">
+
+        {/* Estado y especie */}
+        <p className="mb-3 font-bold text-gray-700 dark:text-gray-400">
           {statusIcon} {character.status} - {character.species}
         </p>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Location: {character.location.name}
+
+        {/* Localización */}
+        <p className="mb-3 font-normal text-gray-400 dark:text-gray-500">
+          Location:{" "}
+          <span className="text-gray-900 dark:text-white font-medium">
+            {character.location.name}
+          </span>
         </p>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Origin: {character.origin.name}
+
+        {/* Origen */}
+        <p className="mb-3 font-normal text-gray-400 dark:text-gray-500">
+          Origin:{" "}
+          <span className="text-gray-900 dark:text-white font-medium">
+            {character.origin.name}
+          </span>
         </p>
       </div>
     </a>
