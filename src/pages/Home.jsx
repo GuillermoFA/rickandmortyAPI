@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useFetchCharacters } from "../hooks/useFetchCharacters"; // Importar el hook
+import { useFetchCharacters } from "../hooks/useFetchCharacter"; // Importar el hook
 import PaginationButtons from "../components/PaginationButtons";
 import SearchInput from "../components/SearchInput";
 import CharacterList from "../components/CharacterList";
