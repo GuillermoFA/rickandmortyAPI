@@ -1,19 +1,21 @@
 /* eslint-disable react/prop-types */
-import Button from "./Button";
-
-function PaginationButtons({ page, setPage, isLoading }) {
+function PaginationButtons({ page, setPage, isLoading, hasNext, hasPrev }) {
   return (
     <div className="flex space-x-2">
-      <Button
-        label="Previous"
+      <button
+        className="px-4 py-2 bg-gray-800 text-white rounded disabled:opacity-50 hover:bg-gray-700"
+        disabled={!hasPrev || isLoading}
         onClick={() => setPage(page - 1)}
-        disabled={page === 1 || isLoading}
-      />
-      <Button
-        label="Next"
+      >
+        Previous
+      </button>
+      <button
+        className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 disabled:opacity-50"
+        disabled={!hasNext || isLoading}
         onClick={() => setPage(page + 1)}
-        disabled={isLoading}
-      />
+      >
+        Next
+      </button>
     </div>
   );
 }
